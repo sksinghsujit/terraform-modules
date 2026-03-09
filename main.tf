@@ -1,4 +1,3 @@
-# main.tf (at the root)
 module "dbs_cluster" {
   source = "./modules/dbs-cluster"
   # These variables are automatically pulled from your HCP Workspace
