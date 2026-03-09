@@ -5,6 +5,8 @@ variable "K8S_TOKEN" {}
 variable "K8S_CA_CERT" {}
 
 
+# Define the kubernetes provider here
+
 provider "kubernetes" {
   host  = var.K8S_HOST
   token = var.K8S_TOKEN
