@@ -1,3 +1,5 @@
+# Variable definitions so that these can be used
+
 variable "K8S_HOST" {}
 variable "K8S_TOKEN" {}
 variable "K8S_CA_CERT" {}
