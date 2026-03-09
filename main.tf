@@ -1,13 +1,8 @@
-provider "kubernetes" {
-  host  = var.K8S_HOST
-  token = var.K8S_TOKEN
-  # If using self-signed certs, you might need:
-  # insecure = true 
-  cluster_ca_certificate = var.K8S_CA_CERT
-}
-
-resource "kubernetes_namespace" "app_ns" {
-  metadata {
-    name = "dbs-application"
-  }
+# main.tf (at the root)
+module "dbs_cluster" {
+  source = "./modules/dbs-cluster"
+  # These variables are automatically pulled from your HCP Workspace
+  K8S_HOST     = var.K8S_HOST
+  K8S_TOKEN    = var.K8S_TOKEN
+  K8S_CA_CERT  = var.K8S_CA_CERT
 }
