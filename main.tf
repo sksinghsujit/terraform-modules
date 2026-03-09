@@ -16,6 +16,7 @@ provider "kubernetes" {
 }
 
 # Call the module from the modules directory
+# To be properly organized
 
 module "dbs_cluster" {
   source = "./modules/dbs-cluster"
