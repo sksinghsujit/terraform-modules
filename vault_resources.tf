@@ -26,7 +26,7 @@ resource "vault_kubernetes_auth_backend_config" "ocp07_config" {
 }
 
 resource "vault_policy" "dev-db-policy" {
-  name = "staging-db-policy"
+  name = "dev-db-policy"
   policy = <<EOT
 path "database/data/development/mariadb/*" {
   capabilities = ["read"]
