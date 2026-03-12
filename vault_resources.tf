@@ -31,9 +31,11 @@ resource "vault_policy" "dev-db-policy" {
 path "database/data/development/mariadb/*" {
   capabilities = ["read"]
 }
-
-path "database/data/development/mariadb/*" {
+path "database/metadata/development/mariadb/*" {
   capabilities = ["list"]
+}
+path "database/metadata/development/mariadb/*" {
+  capabilities = ["list", "read"]
 }
 EOT
 }
@@ -72,6 +74,10 @@ path "database/data/staging/mariadb/*" {
 path "database/data/staging/mariadb/*" {
   capabilities = ["list"]
 }
+
+path "database/metadata/staging/mariadb/*" {
+  capabilities = ["list", "read"]
+}
 EOT
 }
 
@@ -108,6 +114,10 @@ path "database/data/production/mariadb/*" {
 
 path "database/data/production/mariadb/*" {
   capabilities = ["list"]
+}
+
+path "database/metadata/production/mariadb/*" {
+  capabilities = ["list", "read"]
 }
 EOT
 }
