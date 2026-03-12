@@ -1,3 +1,8 @@
+# To create the kubernetes auth backend, config, policy and role for
+# the openshift clusters
+# ocp07, ocp30 and ocp50
+
+
 variable ocp30_ca_cert {}
 variable ocp30_token_reviewer_jwt {}
 variable ocp07_ca_cert {}
