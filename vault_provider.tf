@@ -1,6 +1,4 @@
-
 variable vault_token {}
-
 
 # Vault provider
 
