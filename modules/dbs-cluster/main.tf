@@ -5,8 +5,6 @@ resource "kubernetes_namespace" "app_ns" {
   }
 }
 
-
-
 resource "kubernetes_namespace" "myapp_ns" {
   metadata {
     name = "myapp-ns"
