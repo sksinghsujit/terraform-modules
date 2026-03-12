@@ -4,9 +4,3 @@ resource "kubernetes_namespace" "app_ns" {
     name = "dbs-application"
   }
 }
-
-resource "kubernetes_namespace" "myapp_ns" {
-  metadata {
-    name = "myapp-ns"
-  }
-}
