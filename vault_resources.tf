@@ -107,7 +107,7 @@ path "database/data/production/mariadb/*" {
 EOT
 }
 
-resource "vault_kubernetes_auth_backend_role" "staging_role" {
+resource "vault_kubernetes_auth_backend_role" "production_role" {
   backend                          = "ocp50" # The path you enabled
   role_name                        = "db-app-role"
   bound_service_account_names      = ["myapp-sa"]
