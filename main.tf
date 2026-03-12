@@ -4,9 +4,6 @@ variable "K8S_HOST" {}
 variable "K8S_TOKEN" {}
 variable "K8S_CA_CERT" {}
 
-variable "vault_token" {}
-
-
 # Define the kubernetes provider here
 
 provider "kubernetes" {
@@ -28,9 +25,3 @@ module "dbs_cluster" {
   K8S_CA_CERT  = var.K8S_CA_CERT
 }
 
-# Vault provider
-
-provider "vault" {
-  address = "https://vault.svc.cluster.local:8200" 
-  token   = var.vault_token 
-}
